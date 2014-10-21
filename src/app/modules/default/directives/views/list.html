@@ -1,0 +1,34 @@
+ <ul>
+      <li ng-repeat="item in items">
+         <a class="favourite" href="#">
+            <i class="icon-heart"></i>
+         </a>
+
+         <img ng-src="http://i4.ytimg.com/vi/{{item.thumbnail}}/0.jpg">
+
+         <div class="item-detail">
+            <a ui-sref="detail({id:item.id,slug:slug(item.title)})">
+               <h3>{{item.title}}</h3>
+               <p>{{item.summery}}</p>
+            </a>
+            <ul class="speakers">
+               <li ng-repeat="speaker in item.speakers">
+                  <a href="#">
+                  <img ng-src="{{speaker.avatar}}" />{{speaker.name}}
+                  </a>
+               </li>
+            </ul>
+
+
+            <ul class="tags">
+               <li ng-repeat="item in item.topics">
+                  <a href="#">{{item}}</a>
+               </li>
+            </ul>
+
+
+         </div>
+
+
+      </li>
+</ul>

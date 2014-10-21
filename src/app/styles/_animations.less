@@ -1,0 +1,17 @@
+.page-animation {
+   width: 100%;
+   min-height: 100%;
+   &.ng-enter, &.ng-leave {
+      position: absolute;
+      -webkit-animation-duration: 0.5s;
+      animation-duration: 0.5s;
+      &.ng-enter {
+         -webkit-animation-name: fadeIn;
+         animation-name: fadeIn;
+      }
+      &.ng-leave {
+         -webkit-animation-name: fadeOut;
+         animation-name: fadeOut;
+      }
+   }
+}

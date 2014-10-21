@@ -1,0 +1,54 @@
+<section class="introduction">
+<div class="introduction-inner">
+	<div class="search">
+	<h4>Learn to AngularJS to make Apps, Websites, and much more...
+	</h4>
+	<div class="input-group">
+      <input autofocus placeholder="What do you want to learn today?" type="text" class="form-control">
+      <span class="input-group-btn">
+        <button class="btn btn-primary" type="button"><i class="icon-search"></i></button>
+      </span>
+    </div><!-- /input-group -->
+
+    </div>
+
+    <div class="actions">
+    <button class="btn btn-primary btn-lg btn-raised" type="button">Random Resource</button>
+    <button class="btn btn-default btn-lg btn-raised" type="button">Submit a Resource</button>
+    </div>
+
+ </div>   
+</section>
+
+<section id="listing">
+<ul>
+	<li ng-repeat="item in items">
+	<a class="favourite" href="#">
+	<span>53</span><i class="icon-heart"></i>
+	</a>
+
+	<img src="http://i4.ytimg.com/vi/{{item.thumbnail}}/0.jpg">
+
+	<div class="detail">
+ 	
+	<h3>{{item.title}}</h3>
+	<p>{{item.summery}}</p>
+
+	<ul class="speakers">
+		<li ng-repeat="speaker in item.speakers">
+			<img ng-src="{{speaker.avatar}}" />	{{speaker.name}}
+		</li>
+	</ul>
+	
+
+	<ul class="tags">
+		<li ng-repeat="item in item.topics">{{item}}</li>
+	</ul>
+	
+
+ 	</div>
+
+
+ </li>
+</ul>
+</section>

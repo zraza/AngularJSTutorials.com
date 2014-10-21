@@ -1,0 +1,31 @@
+body {
+   //background: #E2E2E2;
+   font-size: 20px;
+   @media (min-width: @screen-sm-min) {
+      font-size: 26px;
+      color: #2E2D2D;
+   }
+   font-family:"Open Sans", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+   line-height: 1.5;
+}
+ul, li {
+   padding: 0;
+   list-style: none;
+   margin: 0;
+}
+
+a{
+   text-decoration: none;
+   outline: none;
+   color: darken(@brand-primary,10%);
+   &:hover,&:active {
+   text-decoration: none;
+   outline: none;
+}
+}
+.btn-raised {
+   border-style: solid;
+   border-width: 1px 1px 3px;
+   box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+   padding: @grid-gutter-width/2 @grid-gutter-width*1.5;
+}

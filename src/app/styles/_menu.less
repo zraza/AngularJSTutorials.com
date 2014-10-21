@@ -1,0 +1,83 @@
+@header-height: 80px;
+.header {
+   
+   width: 100%;
+
+   nav {
+    width: 100%;
+      background: rgba(247, 247, 247, 0.9); // #E1E3E4;
+      border-top: 1px solid #d2d6d5;
+      border-bottom: 1px solid #d2d6d5;
+      //margin-bottom: @grid-gutter-width;
+      padding: 0 @grid-gutter-width*2;
+      .clearfix();
+      .brand {
+         //border-left: 1px solid #ccc;
+         height: @header-height;
+         padding: @grid-gutter-width/2 @grid-gutter-width/2;
+         float: left;
+         font-size: 1.3em;
+         color: #000;
+         span {
+            color: #fff;
+            padding: @grid-gutter-width/6 @grid-gutter-width/4;
+            &.first {
+               background: @brand-primary;
+            }
+            &.last {
+               background: #000;
+            }
+         }
+      }
+      >ul {
+         float: right;
+         text-align: right;
+         li {
+            float: left;
+            font-size: 0.7em;
+            &:first-child {
+               //border-left: 0;
+            }
+            &.submit {
+               background: #3c948b;
+               font-weight: bold;
+               a {
+                  color: #333;
+               }
+            }
+            a {
+               display: block;
+               border-left: 1px solid #ccc;
+               padding: @header-height/3 30px;
+               //line-height: @header-height;
+               height: @header-height;
+               color: #333;
+               .transition(background 0.25s ease-out 0s);
+               &.search {
+                  //line-height: 1.5em;
+                  font-size: 1.5em;
+                  //border-right: 0;
+                  background: @brand-primary;
+                  color: #fff;
+                  padding: @header-height/3 @header-height/4;
+                  &:hover {
+                     background: #000;
+                     color: #fff;
+                  }
+               }
+               &:hover, &.active {
+                  background: #E9EBEB;
+                  text-decoration: none;
+                  &.active {
+                     font-weight: bold;
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+.content{
+    .clearfix();
+    margin-top: @header-height;
+}
