@@ -6,6 +6,7 @@ app
 To start developing in the project run:
 
 ```bash
+npm install
 gulp serve
 ```
 
